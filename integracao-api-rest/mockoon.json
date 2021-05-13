@@ -1,0 +1,397 @@
+{
+    "source": "mockoon:1.11.0",
+    "data": [
+        {
+            "type": "environment",
+            "item": {
+                "uuid": "",
+                "lastMigration": 13,
+                "name": "SRCC",
+                "endpointPrefix": "api",
+                "latency": 0,
+                "port": 301,
+                "routes": [
+                    {
+                        "uuid": "",
+                        "documentation": "HEALTH",
+                        "method": "get",
+                        "endpoint": "v1/health",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "OK.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Internal Server Error - Erro inesperado.<br><br> <b>Valores possiveis:</b><br> EGEN0050 - Erro no processamento.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json; charset=utf-8"
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "GEN0001",
+                        "method": "get",
+                        "endpoint": "v1/ferramentas/eco",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "OK.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json; charset=utf-8"
+                                    },
+                                    {
+                                        "key": "x-jws-signature",
+                                        "value": ""
+                                    },
+                                    {
+                                        "key": "Content-Encoding",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Unauthorized - Dados do cabeçalho incorretos. Favor verificar se o cabeçalho x-jws-signature foi devidamente preenchido.<br><br> <b>Valores possiveis:</b><br> EGEN1017 - Certificado invalido.<br> EGEN1104 - Chave invalida.<br> EGEN9905 - Algoritmo da chave de assinatura invalido.<br> EGEN9910 - Numero de serie do certificado da assinatura invalido.<br> EGEN9911 - Assinatura da Mensagem invalida.<br> EGEN9920 - Certificado nao encontrado.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json; charset=utf-8"
+                                    },
+                                    {
+                                        "key": "x-jws-signature",
+                                        "value": ""
+                                    },
+                                    {
+                                        "key": "Content-Encoding",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 412,
+                                "label": "Precondiction Failed - Dados da requisição inconsistentes.<br><br> <b>Valores possiveis:</b><br> EGEN1009 - Data informada diferente da data de referência do Sistema.<br> EGEN0001 - Formato JSON invalido.<br> EGEN0011 - Codigo do identificador da requisição ja registrado.<br> EGEN0012 - Codigo do identificador da requisição nao confere com ISPB.<br> EGEN0013 - Codigo do identificador da requisição invalido.<br> EGEN0017 - Campo obrigatorio ausente.<br> EGEN0019 - Tipo ID emissor ausente/invalido.<br> EGEN0023 - Conteudo invalido.<br> EGEN0034 - Codificacao de caracteres invalida.<br> EGEN0037 - Formato invalido zip.<br> EGEN0043 - Erro na validação do JSON.<br> EGEN0061 - Caracter invalido.<br> EGEN0062 - Codificacao de caracteres invalida.<br> EGEN0085 - Tamanho de Mensagem invalido.<br> EGEN1009 - Data Movimento invalida.<br> EGEN9912 - Identificação do Emissor invalida.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json; charset=utf-8"
+                                    },
+                                    {
+                                        "key": "x-jws-signature",
+                                        "value": ""
+                                    },
+                                    {
+                                        "key": "Content-Encoding",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 413,
+                                "label": "Payload Too Large - Tamanho do Payload excedeu o limite suportado.<br><br> <b>Valores possiveis:</b><br> EGEN0024 - Tamanho do arquivo invalido.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json; charset=utf-8"
+                                    },
+                                    {
+                                        "key": "x-jws-signature",
+                                        "value": ""
+                                    },
+                                    {
+                                        "key": "Content-Encoding",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Internal Server Error - Erro inesperado.<br><br> <b>Valores possiveis:</b><br> EGEN0050 - Erro no processamento.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json; charset=utf-8"
+                                    },
+                                    {
+                                        "key": "x-jws-signature",
+                                        "value": ""
+                                    },
+                                    {
+                                        "key": "Content-Encoding",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "RCC0001",
+                        "method": "post",
+                        "endpoint": "v1/RCC0001",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "OK.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json; charset=utf-8"
+                                    },
+                                    {
+                                        "key": "x-jws-signature",
+                                        "value": ""
+                                    },
+                                    {
+                                        "key": "Content-Encoding",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Unauthorized - Dados do cabeçalho incorretos. Favor verificar se o cabeçalho x-jws-signature foi devidamente preenchido.<br><br> <b>Valores possiveis:</b><br> EGEN1017 - Certificado invalido.<br> EGEN1104 - Chave invalida.<br> EGEN9905 - Algoritmo da chave de assinatura invalido.<br> EGEN9910 - Numero de serie do certificado da assinatura invalido.<br> EGEN9911 - Assinatura da Mensagem invalida.<br> EGEN9920 - Certificado nao encontrado.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json; charset=utf-8"
+                                    },
+                                    {
+                                        "key": "x-jws-signature",
+                                        "value": ""
+                                    },
+                                    {
+                                        "key": "Content-Encoding",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Internal Server Error - Erro inesperado.<br><br> <b><u>Valores possiveis:</u></b><br> ERCC0999 - Erro inesperado EGEN0050 - Erro no processamento.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json; charset=utf-8"
+                                    },
+                                    {
+                                        "key": "x-jws-signature",
+                                        "value": ""
+                                    },
+                                    {
+                                        "key": "Content-Encoding",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false
+                    },
+                    {
+                        "uuid": "",
+                        "documentation": "RCC0002",
+                        "method": "post",
+                        "endpoint": "v1/RCC0002",
+                        "responses": [
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "OK.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json; charset=utf-8"
+                                    },
+                                    {
+                                        "key": "x-jws-signature",
+                                        "value": ""
+                                    },
+                                    {
+                                        "key": "Content-Encoding",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 401,
+                                "label": "Unauthorized - Dados do cabeçalho incorretos. Favor verificar se o cabeçalho x-jws-signature foi devidamente preenchido.<br><br> <b>Valores possiveis:</b><br> EGEN1017 - Certificado invalido.<br> EGEN1104 - Chave invalida.<br> EGEN9905 - Algoritmo da chave de assinatura invalido.<br> EGEN9910 - Numero de serie do certificado da assinatura invalido.<br> EGEN9911 - Assinatura da Mensagem invalida.<br> EGEN9920 - Certificado nao encontrado.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json; charset=utf-8"
+                                    },
+                                    {
+                                        "key": "x-jws-signature",
+                                        "value": ""
+                                    },
+                                    {
+                                        "key": "Content-Encoding",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            },
+                            {
+                                "uuid": "",
+                                "body": "",
+                                "latency": 0,
+                                "statusCode": 500,
+                                "label": "Internal Server Error - Erro inesperado.<br><br> <b><u>Valores possiveis:</u></b><br> ERCC0999 - Erro inesperado.<br> EGEN0050 - Erro no processamento.",
+                                "headers": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json; charset=utf-8"
+                                    },
+                                    {
+                                        "key": "x-jws-signature",
+                                        "value": ""
+                                    },
+                                    {
+                                        "key": "Content-Encoding",
+                                        "value": ""
+                                    }
+                                ],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false
+                    }
+                ],
+                "proxyMode": false,
+                "proxyHost": "",
+                "https": false,
+                "cors": true,
+                "headers": [],
+                "proxyReqHeaders": [
+                    {
+                        "key": "",
+                        "value": ""
+                    }
+                ],
+                "proxyResHeaders": [
+                    {
+                        "key": "",
+                        "value": ""
+                    }
+                ]
+            }
+        }
+    ]
+}
